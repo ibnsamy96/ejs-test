@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body class="container">
+    <aside><%- include('../partials/sidebar') %></aside>
+    <main></main>
+    <script>
+      const mainList = document.querySelector("main");
+
+      document.querySelector("input").addEventListener("input", async (e) => {
+        const itemsNumber = Number(e.target.value);
+
+        if (Number.isNaN() || itemsNumber <= 0) {
+          mainList.innerHTML = "";
+          return;
+        }
+
+        try {
+          const response = await fetch(
+            "/list-items?items_number=" + itemsNumber
+          );
+          const listHTML = await response.text();
+
+          mainList.innerHTML = listHTML;
+        } catch (error) {
+          console.log(error);
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: grid;
+  grid: 100% / 1fr 4fr;
+}
+
+aside {
+  /* width: 30%; */
+  /* max-width: 300px; */
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form-container {
+  border: 1px black solid;
+  text-align: center;
+  width: 100%;
+}
+
+#form-container input {
+  max-width: 50%;
+}
+
+main {
+  /* max-width: 70%; */
+  background-color: gray;
+}
