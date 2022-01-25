@@ -9,6 +9,7 @@
   --theme-text-font: Arial, Helvetica, sans-serif;
   --theme-border: #7f7f7f 2px solid;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -32,31 +33,82 @@ body {
 }
 
 aside {
-  /* width: 30%; */
-  /* max-width: 300px; */
-  background-color: red;
+  background-color: var(--theme-dark-BG-color);
   display: flex;
   justify-content: center;
   align-items: center;
+  border-right: var(--theme-border);
 }
 
 #form-container {
-  border: 1px black solid;
+  background-color: var(--theme-darker-BG-color);
+  border: var(--theme-border);
+  border-right: none;
+  border-left: none;
   text-align: center;
   width: 100%;
+  padding: 0.6rem 0;
 }
 
+#form-container h1 {
+  font-weight: normal;
+  margin-bottom: 0.6rem;
+}
 #form-container input {
   max-width: 50%;
+  text-align: center;
+  color: black;
+  font-size: 1rem;
+  padding: 0.2rem;
+  border: var(--theme-border);
+  background-color: var(--theme-normal-BG-color);
+}
+
+::placeholder {
+  color: var(--theme-text-color);
+  font-weight: bold;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: var(--theme-text-color);
+  font-weight: bold;
+}
+
+::-ms-input-placeholder {
+  font-weight: bold;
+  color: var(--theme-text-color);
 }
 
 main {
-  /* max-width: 70%; */
-  background-color: gray;
+  background-color: var(--theme-light-BG-color);
+  padding: 4rem;
+  overflow-y: auto;
 }
 
 li {
   list-style: none;
+  border: var(--theme-border);
+  background-color: var(--theme-darker-BG-color);
+  padding: 1.1rem;
+}
+
+li:not(:last-of-type) {
+  margin-bottom: 4rem;
+}
+
+main li p {
+  /* width: fit-content; */
+  /* aspect-ratio: 1/1; */
+  background-color: var(--theme-normal-BG-color);
+  padding: 1rem;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
@@ -66,4 +118,19 @@ footer {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+footer span {
+  background-color: var(--theme-dark-BG-color);
+  font-size: 1.3rem;
+  padding: 1.5rem 1.2rem;
+  border: var(--theme-border);
+  border-bottom: 0;
+}
+
+footer span:first-of-type {
+  border-left: 0;
+}
+footer span:last-of-type {
+  border-right: 0;
 }
