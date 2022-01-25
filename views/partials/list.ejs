@@ -1,2 +1,4 @@
-<% for (let i = 1; i <= itemsNumber;i++) { %> <%-
-include('./list-item',{index:i}) %> <% } %>
+<ol>
+  <% for (let i = 1; i <= itemsNumber;i++) { %> <%-
+  include('./list-item',{index:i}) %> <% } %>
+</ol>

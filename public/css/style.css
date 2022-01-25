@@ -37,3 +37,16 @@ main {
   /* max-width: 70%; */
   background-color: gray;
 }
+
+li {
+  list-style: none;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

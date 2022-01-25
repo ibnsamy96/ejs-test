@@ -6,6 +6,10 @@
   <body class="container">
     <aside><%- include('../partials/sidebar') %></aside>
     <main></main>
+    <footer>
+      <%- include('../partials/obj',{OBJNumber:1}) %> <%-
+      include('../partials/obj',{OBJNumber:2}) %>
+    </footer>
     <script>
       const mainList = document.querySelector("main");
 
