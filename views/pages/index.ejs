@@ -12,19 +12,21 @@
     </footer>
     <script>
       const mainList = document.querySelector("main");
+      const quantityInput = document.querySelector("input");
 
-      document.querySelector("input").addEventListener("input", async (e) => {
-        const itemsNumber = Number(e.target.value);
+      quantityInput.addEventListener("input", async (event) => {
+        const itemsNumber = Number(event.target.value);
 
-        if (Number.isNaN() || itemsNumber <= 0) {
+        if (Number.isNaN(itemsNumber) || itemsNumber <= 0) {
           mainList.innerHTML = "";
+          quantityInput.value = "";
           return;
         }
 
         try {
-          const response = await fetch(
-            "/list-items?items_number=" + itemsNumber
-          );
+          const listRelativeURL = "/list-items?items_number=" + itemsNumber;
+
+          const response = await fetch(listRelativeURL);
           const listHTML = await response.text();
 
           mainList.innerHTML = listHTML;
