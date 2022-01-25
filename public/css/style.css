@@ -1,3 +1,14 @@
+:root {
+  --theme-lighter-BG-color: #e7e6e6;
+  --theme-light-BG-color: #d0cece;
+  --theme-normal-BG-color: #d9d9d9;
+  --theme-dark-BG-color: #bfbfbf;
+  --theme-darker-BG-color: #afabab;
+
+  --theme-text-color: #000000;
+  --theme-text-font: Arial, Helvetica, sans-serif;
+  --theme-border: #7f7f7f 2px solid;
+}
 * {
   margin: 0;
   padding: 0;
